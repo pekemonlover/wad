@@ -1,0 +1,6 @@
+<div style="max-width: 300px; margin: 50px auto; display: flex; flex-direction: column; gap: 10px;">
+  <h2>Login</h2>
+  <input [(ngModel)]="credentials.email" placeholder="Email" type="email">
+  <input [(ngModel)]="credentials.password" placeholder="Password" type="password">
+  <button (click)="handleLogin()">Login</button>
+</div>
