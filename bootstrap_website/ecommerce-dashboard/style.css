@@ -1,0 +1,81 @@
+/* Base Layout */
+body {
+  overflow-x: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar Wrapper */
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  transition: margin 0.25s ease-out;
+  width: 15rem;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 1.5rem 1.25rem;
+  font-size: 1.25rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+/* Sidebar Links Styling */
+.list-group-item {
+  border: none;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.list-group-item.active {
+  background-color: #495057 !important;
+  border-color: #495057 !important;
+  font-weight: 500;
+}
+
+.list-group-item:hover:not(.active) {
+  background-color: #343a40 !important;
+  padding-left: 25px; /* Slight indent on hover */
+}
+
+/* Page Content */
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+/* Toggle Interaction */
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+#menu-toggle {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+#menu-toggle:hover {
+  color: #0d6efd !important;
+}
+
+/* Utilities */
+.text-dark-50 {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Layout using Media Queries */
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}

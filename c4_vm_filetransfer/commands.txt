@@ -1,0 +1,26 @@
+1. To check the ip addresses: 
+
+ip a 
+OR 
+ifconfig
+
+
+VM1: 
+
+2. Create text files with content
+
+echo "Hello Welcome" > file1.txt
+
+3. See the content
+
+cat file1.txt
+
+
+VM2:
+
+scp file1.txt file2.txt vagrant@[IP_OF_VM2]:/home/vagrant/
+
+
+
+
+
